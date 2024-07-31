@@ -1,3 +1,6 @@
+file_path=input("Enter a file name: ")
+key=input("Enter a key:")#MAX_CONNECTIONS
+value=input("Enter a value: ")
 def update_server_conf(file_path,key,value):
     with open(file_path,"r") as file:
         lines=file.readlines()
@@ -9,4 +12,4 @@ def update_server_conf(file_path,key,value):
             else:
                 file.write(line)
                              
-update_server_conf("server.conf","MAX_CONNECTIONS","300")
+update_server_conf(file_path,key,value)
